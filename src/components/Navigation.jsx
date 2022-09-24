@@ -23,7 +23,7 @@ function Navigation() {
 			</div>
 			<button
 				onClick={handleLogout}
-				className="justify-end self-end bg-gray-800/30 py-2 px-4 rounded-md font-semibold text-indigo-500 hover:bg-gray-700/30 transition-colors duration-200 ease-in inline-block">
+				className="justify-end capitalize self-end bg-gray-800/30 py-2 px-4 rounded-md font-semibold text-indigo-500 hover:bg-gray-700/30 transition-colors duration-200 ease-in inline-block">
 				logout
 			</button>
 		</div>

@@ -71,12 +71,12 @@ function Work() {
 			{!message && (
 				<div className="mt-10 flex items-center justify-center space-x-4">
 					<button
-						className="w-full drop-shadow bg-gray-900 hover:bg-indigo-900 rounded-md hover:text-indigo-400 transition-colors duration-200 ease-linear group py-2 px-4 font-medium text-indigo-600"
+						className="w-full drop-shadow capitalize bg-gray-900 hover:bg-indigo-900 rounded-md hover:text-indigo-400 transition-colors duration-200 ease-linear group py-2 px-4 font-medium text-indigo-600"
 						onClick={handleClick}>
 						{click ? "stop" : "start"}
 					</button>
 					<button
-						className="w-full drop-shadow bg-gray-900 hover:bg-indigo-900 rounded-md hover:text-indigo-400 transition-colors duration-200 ease-linear group py-2 px-4 font-medium text-indigo-600"
+						className="w-full drop-shadow capitalize bg-gray-900 hover:bg-indigo-900 rounded-md hover:text-indigo-400 transition-colors duration-200 ease-linear group py-2 px-4 font-medium text-indigo-600"
 						onClick={handleReset}>
 						reset
 					</button>
