@@ -5,6 +5,7 @@ import {
 	getAuth,
 	createUserWithEmailAndPassword,
 	signInWithEmailAndPassword,
+	signOut,
 } from "firebase/auth";
 
 const AuthContext = createContext();
@@ -26,6 +27,10 @@ export function AuthProvider({ children }) {
 		return signInWithEmailAndPassword(auth, email, password);
 	}
 
+	function logout() {
+		return signOut(auth);
+	}
+
 	useEffect(() => {
 		const unregister = auth.onAuthStateChanged((user) => setCurrentUser(user));
 
@@ -36,6 +41,7 @@ export function AuthProvider({ children }) {
 		currentUser,
 		createUser,
 		signIn,
+		logout,
 	};
 	return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

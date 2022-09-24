@@ -27,7 +27,8 @@ function Login() {
 				.then((res) => {
 					toast.success("loggedIn Successfully");
 					console.log(res.user);
-					navigate("/login");
+					localStorage.setItem("user", res.user.email);
+					navigate("/");
 				})
 				.catch((err) => {
 					const code = err.code;

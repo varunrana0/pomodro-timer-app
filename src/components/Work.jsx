@@ -50,8 +50,8 @@ function Work() {
 	}
 
 	return (
-		<div className="flex flex-col items-center justify-center py-10 sm:px-4 px-2">
-			<header className="md:text-6xl font-black capitalize text-indigo-700 mb-10">
+		<div className="md:py-10 py-5 sm:px-4 px-2 h-full max-w-xl mx-auto flex flex-col items-center justify-center w-full">
+			<header className="md:text-6xl text-4xl text-center md:mt-10 font-black capitalize text-indigo-700 mb-10">
 				{!message ? "Pomodro Timer" : "break time"}
 			</header>
 			{message && (
@@ -60,14 +60,14 @@ function Work() {
 				</h1>
 			)}
 
-			<p className="flex md:flex-row  flex-col gap-3  items-center mt-5 text-gray-600 font-black">
-				<span className="h-52 w-52 text-9xl  rounded-xl bg-gray-900  drop-shadow-md p-4 inline-flex items-center justify-center">
+			<p className="flex md:flex-row flex-col gap-3  items-center text-gray-600 font-black">
+				<span className="md:h-52 h-40 md:w-52 w-40 md:text-9xl text-4xl  rounded-xl bg-gray-900  drop-shadow-md p-4 inline-flex items-center justify-center">
 					{minutes}
 				</span>
 				<span className="flex-none inline-flex text-6xl md:rotate-0 rotate-90">
 					:
 				</span>
-				<span className="h-52 w-52 text-9xl  rounded-xl bg-gray-900  drop-shadow-md p-4 inline-flex items-center justify-center">
+				<span className="md:h-52 h-40 md:w-52 w-40 md:text-9xl text-4xl  rounded-xl bg-gray-900  drop-shadow-md p-4 inline-flex items-center justify-center">
 					{seconds}
 				</span>
 			</p>
