@@ -24,7 +24,6 @@ function Signup() {
 			await createUser(userEmail.current.value, userPass.current.value)
 				.then((res) => {
 					toast.success("loggedIn Successfully");
-					console.log(res.user);
 					localStorage.setItem("user", res.user.email);
 					navigate("/");
 				})

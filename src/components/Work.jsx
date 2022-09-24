@@ -9,40 +9,36 @@ function Work() {
 	let minutes = Minutes < 10 ? `0${Minutes}` : Minutes;
 	let seconds = Seconds < 10 ? `0${Seconds}` : Seconds;
 
-	function getTimerStart() {
-		if (Seconds === 0) {
-			if (Minutes !== 0) {
-				setSeconds(59);
-				setMinutes((minutes) => minutes - 1);
-			} else {
-				let minutes = message ? 24 : 4;
-				let seconds = 59;
-
-				setMessage(!message);
-				setSeconds(seconds);
-				setMinutes(minutes);
-			}
-		} else {
-			setSeconds((seconds) => seconds - 1);
-		}
+	function handleClick() {
+		setClick((click) => !click);
 	}
 
 	useEffect(() => {
 		const interval = setInterval(() => {
 			clearInterval(interval);
 			if (click) {
-				getTimerStart();
+				if (Seconds === 0) {
+					if (Minutes !== 0) {
+						setSeconds(59);
+						setMinutes((minutes) => minutes - 1);
+					} else {
+						let minutes = message ? 24 : 4;
+						let seconds = 59;
+
+						setMessage(!message);
+						setSeconds(seconds);
+						setMinutes(minutes);
+					}
+				} else {
+					setSeconds((seconds) => seconds - 1);
+				}
 			}
 		}, 1000);
 
 		return () => {
 			clearInterval(interval);
 		};
-	}, [Minutes, Seconds, click]);
-
-	function handleClick() {
-		setClick((click) => !click);
-	}
+	}, [Minutes, Seconds, click, message]);
 
 	function handleReset() {
 		setMinutes(25);
