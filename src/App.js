@@ -1,4 +1,4 @@
-// import Home from "./components/Home";
+import Home from "./components/Home";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 
@@ -13,8 +13,8 @@ function App() {
 			<AuthProvider>
 				<BrowserRouter>
 					<Routes>
-						<Route path="/" element={<Signup />} />
-						{/* <Route path="/" element={<Home />} /> */}
+						<Route path="/" element={<Home />} />
+						<Route path="/signup" element={<Signup />} />
 						<Route path="/login" element={<Login />} />
 					</Routes>
 				</BrowserRouter>
