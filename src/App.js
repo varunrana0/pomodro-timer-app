@@ -1,13 +1,11 @@
-// import Login from "./components/Login";
-import { ToastContainer } from "react-toastify";
-
-import "react-toastify/dist/ReactToastify.css";
-
-import { AuthProvider } from "./components/context/AuthContext";
-
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Home from "./components/Home";
+import Login from "./components/Login";
 import Signup from "./components/Signup";
+
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { AuthProvider } from "./components/context/AuthContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 	return (
@@ -17,7 +15,7 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Signup />} />
 						{/* <Route path="/" element={<Home />} /> */}
-						{/* <Route path="/login" element={<Login />} /> */}
+						<Route path="/login" element={<Login />} />
 					</Routes>
 				</BrowserRouter>
 				<ToastContainer />
