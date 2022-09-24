@@ -56,6 +56,7 @@ function Signup() {
 				<h3 className="text-indigo-50 capitalize font-medium lg:text-4xl text-3xl text-center ">
 					create an account
 				</h3>
+
 				<div className="mt-10 flex flex-col space-y-2">
 					<label
 						className="text-indigo-200 font-medium tracking-wide text-sm"
