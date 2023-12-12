@@ -50,9 +50,7 @@ function Login() {
 				</svg>
 			</div>
 			<form
-				className="max-w-sm mx-auto w-full border border-indigo-200/30 md:py-8 md:px-5 py-4 px-3 rounded-lg"
-{/* 				onSubmit={handleSubmit} */}
-				>
+				className="max-w-sm mx-auto w-full border border-indigo-200/30 md:py-8 md:px-5 py-4 px-3 rounded-lg">
 				<h3 className="text-indigo-50 font-semibold lg:text-4xl text-3xl text-center ">
 					Login
 				</h3>
