@@ -1,8 +1,5 @@
 import React, { useState, useRef } from "react";
-import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
-
-import { UseAuth } from "./context/AuthContext";
 
 function Login() {
 	const [toggle, setToggle] = useState(false);
@@ -11,7 +8,6 @@ function Login() {
 	const navigate = useNavigate();
 	const [loading, setLoading] = useState(false);
 
-	const { signIn } = UseAuth();
 
 	function handleToggle() {
 		setToggle(!toggle);
