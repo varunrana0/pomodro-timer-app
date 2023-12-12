@@ -29,12 +29,12 @@ function Login() {
 			// 		localStorage.setItem("user", res.user.email);
 			// 		navigate("/");
 			// 	})
+				// .catch((err) => {
+				// 	const code = err.code;
+				// 	toast.error(code);
+				// 	console.log(err.code);
+				// });
 					navigate("/");
-				.catch((err) => {
-					const code = err.code;
-					toast.error(code);
-					console.log(err.code);
-				});
 		} catch (error) {
 			console.log(error);
 		}
