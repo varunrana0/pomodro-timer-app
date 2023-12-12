@@ -23,12 +23,13 @@ function Login() {
 		if (!userEmail.current.value || !userPass.current.value) return;
 		try {
 			setLoading(true);
-			await signIn(userEmail.current.value, userPass.current.value)
-				.then((res) => {
-					toast.success("loggedIn Successfully");
-					localStorage.setItem("user", res.user.email);
+			// await signIn(userEmail.current.value, userPass.current.value)
+			// 	.then((res) => {
+			// 		toast.success("loggedIn Successfully");
+			// 		localStorage.setItem("user", res.user.email);
+			// 		navigate("/");
+			// 	})
 					navigate("/");
-				})
 				.catch((err) => {
 					const code = err.code;
 					toast.error(code);
@@ -54,7 +55,8 @@ function Login() {
 			</div>
 			<form
 				className="max-w-sm mx-auto w-full border border-indigo-200/30 md:py-8 md:px-5 py-4 px-3 rounded-lg"
-				onSubmit={handleSubmit}>
+				onSubmit={handleSubmit}
+				>
 				<h3 className="text-indigo-50 font-semibold lg:text-4xl text-3xl text-center ">
 					Login
 				</h3>
