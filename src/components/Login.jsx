@@ -13,30 +13,30 @@ function Login() {
 		setToggle(!toggle);
 	}
 
-	async function handleSubmit(e) {
-		e.preventDefault();
+	// async function handleSubmit(e) {
+	// 	e.preventDefault();
 
-		if (!userEmail.current.value || !userPass.current.value) return;
-		try {
-			setLoading(true);
-			// await signIn(userEmail.current.value, userPass.current.value)
-			// 	.then((res) => {
-			// 		toast.success("loggedIn Successfully");
-			// 		localStorage.setItem("user", res.user.email);
-			// 		navigate("/");
-			// 	})
-				// .catch((err) => {
-				// 	const code = err.code;
-				// 	toast.error(code);
-				// 	console.log(err.code);
-				// });
-					navigate("/");
-		} catch (error) {
-			console.log(error);
-		}
+	// 	if (!userEmail.current.value || !userPass.current.value) return;
+	// 	try {
+	// 		setLoading(true);
+	// 		// await signIn(userEmail.current.value, userPass.current.value)
+	// 		// 	.then((res) => {
+	// 		// 		toast.success("loggedIn Successfully");
+	// 		// 		localStorage.setItem("user", res.user.email);
+	// 		// 		navigate("/");
+	// 		// 	})
+	// 			// .catch((err) => {
+	// 			// 	const code = err.code;
+	// 			// 	toast.error(code);
+	// 			// 	console.log(err.code);
+	// 			// });
+	// 	} catch (error) {
+	// 		console.log(error);
+	// 				navigate("/");
+	// 	}
 
-		setLoading(false);
-	}
+	// 	setLoading(false);
+	// }
 
 	return (
 		<div className="h-full w-full flex flex-col items-center justify-center bg-indigo-400 md:p-4 p-2">
@@ -51,7 +51,7 @@ function Login() {
 			</div>
 			<form
 				className="max-w-sm mx-auto w-full border border-indigo-200/30 md:py-8 md:px-5 py-4 px-3 rounded-lg"
-				onSubmit={handleSubmit}
+{/* 				onSubmit={handleSubmit} */}
 				>
 				<h3 className="text-indigo-50 font-semibold lg:text-4xl text-3xl text-center ">
 					Login
@@ -112,7 +112,10 @@ function Login() {
 				{/* SUBMIT BUTTON */}
 				<button
 					disabled={loading}
-					className="py-1 px-3 disabled:bg-opacity-40 flex items-center justify-center mt-10 hover:bg-indigo-900/10 transition-colors duration-300 ease-linear bg-opacity-5 rounded-lg border border-indigo-200/30 text-indigo-50 capitalize font-semibold">
+					className="py-1 px-3 disabled:bg-opacity-40 flex items-center justify-center mt-10 hover:bg-indigo-900/10 transition-colors duration-300 ease-linear bg-opacity-5 rounded-lg border border-indigo-200/30 text-indigo-50 capitalize font-semibold"
+					onClick={()=> navigate("/")}
+					>
+					
 					login
 				</button>
 			</form>
